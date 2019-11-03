@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Todo list application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet">
+</head>
+<body class="body">
+  <header class="header">
+    <h1 class="header-title">Todo list application</h1>
+  </header>
+  <aside class="sidebar">
+    <form class="block-modal js-add-form">
+      <h2>Add task</h2>
+      <input type="text" name="id" autocomplete="off" hidden>
+      <input class="js-task-title task-title" type="text" placeholder="Title" name="title" required autocomplete="off">
+      <textarea class="js-task-description task-description" placeholder="Description" name="description" rows="8" required></textarea>
+      <select name="priority" required>
+        <option value="low">low priority</option>
+        <option value="normal">normal priority</option>
+        <option value="high">high priority</option>
+      </select>
+      <div class="block-buttons">
+        <button class="js-button-cancel" type="button">Cancel</button>
+        <button class="js-button-submit" type="submit">Submit</button>
+      </div>
+    </form>
+    <form class="js-filter-form">
+      <h2>Filter</h2>
+      <input class="js-task-search task-title" type="text" placeholder="Search" name="filter-search" required autocomplete="off">
+      <select class="js-filter-status" name="filter-status" required>
+        <option value="allStatus">all status</option>
+        <option value="open">open status</option>
+        <option value="close">close status</option>
+      </select>
+      <select class="js-filter-priority" name="filter-priority" required>
+        <option value="allPriority">all priority</option>
+        <option value="low">low priority</option>
+        <option value="normal">normal priority</option>
+        <option value="high">high priority</option>
+      </select>
+      <button class="js-button-reset" type="button">Reset filters</button>
+    </form>
+  </aside>
+  <main class="main js-block-result">
+    <h3>Is empty</h3>
+  </main>
+</body>
+<script src="js/main.js"></script>
+</html>
